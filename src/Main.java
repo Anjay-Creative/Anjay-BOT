@@ -1,10 +1,6 @@
 import java.util.*;
 import anjay.function.*;
 public class Main {
-
-//    public static void tampilMenu(){
-//
-//    }
     public static void main(String[] args) {
         System.out.println("======>Welcome<======");
 

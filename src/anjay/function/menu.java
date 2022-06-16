@@ -15,6 +15,15 @@ public class menu {
             case 1:
                 kalkulator hitung = new kalkulator();
                 System.out.println(hitung.bagi(4,2));
+                break;
+            case 2:
+                //Waktu Sekarang dan Jam Dunia
+            case 3:
+                //Konversi mata uang
+            case 4:
+                // NPM to text
+            case 5:
+                //Masih dipikirkan mungkin pake youtube download?
         }
         return pilih;
     }
