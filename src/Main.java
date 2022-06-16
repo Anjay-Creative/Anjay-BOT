@@ -1,5 +1,5 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Gung enek project kontoldawdaw");
+        System.out.println("Gung enek projejct kontoldawdaw");
     }
 }
