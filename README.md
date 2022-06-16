@@ -1,34 +1,24 @@
-# Foobar
+# Anjay-BOT
 
-Foobar is a Python library for dealing with word pluralization.
+Anjay-BOT adalah sebuah program yang dirancang multi fungsi. Program ini tercipta dari bahan bercandaan teman-teman. Kemudian saat tugas akhir semester 2 mahasiswa prodi Teknik Informatika membuat ide untuk membuat BOT Multifungsi dengan nama "Anjay-BOT"
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Gunakan Intelj IDEA
 
 ```bash
-pip install foobar
+Punya program java
 ```
 
-## Usage
+## Usage (Pemakaian)
 
-```python
-import foobar
-
-# returns 'words'
-foobar.pluralize('word')
-
-# returns 'geese'
-foobar.pluralize('goose')
-
-# returns 'phenomenon'
-foobar.singularize('phenomena')
+```java
+git clone https://github.com/Anjay-Creative/Anjay-BOT.git
+java src/Main.java
 ```
 
 ## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
+Semua dapat berkontribusi didalam pembuatan BOT ini. Kami ucapkan terima kasih kepada Antei Codes yang turut membantu dalam mengembangkan Anjay-BOT ini. Semoga Anjay-BOT ini dapat bermanfaat kedepannya.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
