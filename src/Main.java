@@ -12,6 +12,5 @@ public class Main {
         var pilihan = penulis.nextInt();
         menu.Seleksi(pilihan);
 
-
     }
 }

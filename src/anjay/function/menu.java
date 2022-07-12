@@ -32,10 +32,13 @@ public class menu {
                     String[] tmp_kal = temp_1.split("\\-");
                     System.out.println("Hasilnya adalah: " + hitung.kurang(Integer.valueOf(tmp_kal[0]), Integer.valueOf(tmp_kal[1])));
                 }
-
                 break;
             case 2:
                 //Waktu Sekarang dan Jam Dunia
+                System.out.print("Masukan jam sekarang dalam (6/12/3): ");
+                var jam = Inputan.nextInt();
+                jamdunia.main(jam);
+                break;
             case 3:
                 //Konversi mata uang
             case 4:
