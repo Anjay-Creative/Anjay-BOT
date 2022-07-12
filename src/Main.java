@@ -7,6 +7,7 @@ public class Main {
         menu.main(); // tampilkan menu
 
         Scanner penulis = new Scanner(System.in);
+        Scanner Inputan = new Scanner(System.in);
         System.out.print("Masukan pilihan: ");
         System.out.println(new menu().Seleksi(penulis.nextInt()));
 
