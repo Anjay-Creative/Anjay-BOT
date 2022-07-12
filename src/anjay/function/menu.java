@@ -1,7 +1,8 @@
 package anjay.function;
 import anjay.bot.*;
-
+import java.util.*;
 public class menu {
+
     public static void main(){
         System.out.println("""
                 1. Kalkulator (+,-,*,/)
@@ -10,13 +11,28 @@ public class menu {
                 4. NPM to text
                 """);
     }
-    public int Seleksi(int pilih) {
+    public static int Seleksi(int pilih) {
+        Scanner Inputan = new Scanner(System.in);
         switch(pilih){
             case 1:
                 kalkulator hitung = new kalkulator();
+                System.out.print("Masukan nilai: ");
+                String temp_1 = Inputan.next();
+                // Arie
+                if (temp_1.contains("*")) {
+                    String[] tmp_kal = temp_1.split("\\*");
+                    System.out.println("Hasilnya adalah: " + hitung.kali(Integer.valueOf(tmp_kal[0]),Integer.valueOf(tmp_kal[1])));
+                } else if (temp_1.contains("/")) {
+                    String[] tmp_kal = temp_1.split("/");
+                    System.out.println("Hasilnya adalah: " + hitung.bagi(Integer.valueOf(tmp_kal[0]),Integer.valueOf(tmp_kal[1])));
+                } else if (temp_1.contains("+")) {
+                    String[] tmp_kal = temp_1.split("\\+");
+                    System.out.println("Hasilnya adalah: " + hitung.tambah(Integer.valueOf(tmp_kal[0]),Integer.valueOf(tmp_kal[1])));
+                } else if (temp_1.contains("-")) {
+                    String[] tmp_kal = temp_1.split("\\-");
+                    System.out.println("Hasilnya adalah: " + hitung.kurang(Integer.valueOf(tmp_kal[0]), Integer.valueOf(tmp_kal[1])));
+                }
 
-                System.out.println("""example""");
-                System.out.println(hitung.bagi(4,2));
                 break;
             case 2:
                 //Waktu Sekarang dan Jam Dunia
