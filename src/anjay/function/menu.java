@@ -18,19 +18,35 @@ public class menu {
                 kalkulator hitung = new kalkulator();
                 System.out.print("Masukan nilai: ");
                 String temp_1 = Inputan.next();
+                String[] tmp_kal = new String[512];
+                double[] temp_dobel;
+                int counter=0;
                 // Arie
+
                 if (temp_1.contains("*")) {
-                    String[] tmp_kal = temp_1.split("\\*");
-                    System.out.println("Hasilnya adalah: " + hitung.kali(Integer.valueOf(tmp_kal[0]),Integer.valueOf(tmp_kal[1])));
-                } else if (temp_1.contains("/")) {
-                    String[] tmp_kal = temp_1.split("/");
-                    System.out.println("Hasilnya adalah: " + hitung.bagi(Integer.valueOf(tmp_kal[0]),Integer.valueOf(tmp_kal[1])));
-                } else if (temp_1.contains("+")) {
-                    String[] tmp_kal = temp_1.split("\\+");
-                    System.out.println("Hasilnya adalah: " + hitung.tambah(Integer.valueOf(tmp_kal[0]),Integer.valueOf(tmp_kal[1])));
-                } else if (temp_1.contains("-")) {
-                    String[] tmp_kal = temp_1.split("\\-");
-                    System.out.println("Hasilnya adalah: " + hitung.kurang(Integer.valueOf(tmp_kal[0]), Integer.valueOf(tmp_kal[1])));
+                    var ano = temp_1.split("\\*");
+                    System.out.println(Arrays.toString(ano));
+                    System.out.println(Arrays.);
+
+//                    System.out.println("Hasilnya adalah: " + hitung.kali(Integer.valueOf(tmp_kal[0]),Integer.valueOf(tmp_kal[1])));
+                }
+                if (temp_1.contains("/")) {
+                    tmp_kal = temp_1.split("/");
+
+//                    System.out.println("Hasilnya adalah: " + hitung.bagi(Integer.valueOf(tmp_kal[0]),Integer.valueOf(tmp_kal[1])));
+                }
+                if (temp_1.contains("+")) {
+                    tmp_kal = temp_1.split("\\+");
+
+//                    System.out.println("Hasilnya adalah: " + hitung.tambah(Integer.valueOf(tmp_kal[0]),Integer.valueOf(tmp_kal[1])));
+                }
+                if (temp_1.contains("-")) {
+                    tmp_kal = temp_1.split("-");
+//                    System.out.println("Hasilnya adalah: " + hitung.kurang(Integer.valueOf(tmp_kal[0]), Integer.valueOf(tmp_kal[1])));
+                }
+
+                for (var hayuk:tmp_kal) {
+                    System.out.println("HASIL:"+ hayuk);
                 }
                 break;
             case 2:

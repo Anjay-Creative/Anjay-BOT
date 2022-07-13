@@ -5,7 +5,6 @@ public class Main {
         while (true){
             System.out.println("======>Welcome<======");
             //Login
-
             menu.main(); // tampilkan menu
 
             Scanner penulis = new Scanner(System.in);
@@ -18,6 +17,8 @@ public class Main {
             var akhir_menu = penulis.next().equals("n");
             if (akhir_menu){
                 break;
+            }else{
+                fungsi.clearConsole();
             }
 
         }
