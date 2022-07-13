@@ -7,7 +7,7 @@ Anjay-BOT adalah sebuah program yang dirancang multi fungsi. Program ini tercipt
 Gunakan Intelj IDEA
 
 ```bash
-Punya program java
+Punya program java :v
 ```
 
 ## Usage (Pemakaian)

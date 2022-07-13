@@ -11,7 +11,7 @@ public class menu {
                 4. NPM to text
                 """);
     }
-    public static int Seleksi(int pilih) {
+    public static void Seleksi(int pilih) {
         Scanner Inputan = new Scanner(System.in);
         switch(pilih){
             case 1:
@@ -46,7 +46,7 @@ public class menu {
             case 5:
                 //Masih dipikirkan mungkin pake youtube download?
         }
-        return pilih;
+
     }
 
 }
