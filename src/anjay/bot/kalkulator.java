@@ -1,25 +1,27 @@
 package anjay.bot;
 
 public class kalkulator {
-    int hasil;
-    //Method tambah
-    public int tambah(int num1, int num2){
-        hasil = num1+num2;
-        return hasil;
-    }
-    //Method kurang
-    public int kurang(int num1, int num2){
-        hasil = num1-num2;
-        return hasil;
-    }
-    //Method kali
-    public int kali(int num1, int num2){
-        hasil = num1*num2;
-        return hasil;
-    }
-    //Method bagi
-    public float bagi(int num1, int num2){
-        hasil = num1/num2;
+    static double hasil;
+    static String[] tmp_kal;
+    public static double exekusi(String temp_1){
+
+        if (temp_1.contains("*")) {
+            tmp_kal = temp_1.split("\\*");
+            hasil = Double.parseDouble(tmp_kal[0])*Double.parseDouble(tmp_kal[1]);
+        }
+        if (temp_1.contains("/")) {
+            tmp_kal = temp_1.split("/");
+            hasil = Double.parseDouble(tmp_kal[0])/Double.parseDouble(tmp_kal[1]);
+        }
+        if (temp_1.contains("+")) {
+            tmp_kal = temp_1.split("\\+");
+            hasil = Double.parseDouble(tmp_kal[0])+Double.parseDouble(tmp_kal[1]);
+
+        }
+        if (temp_1.contains("-")) {
+            tmp_kal = temp_1.split("-");
+            hasil = Double.parseDouble(tmp_kal[0])-Double.parseDouble(tmp_kal[1]);
+        }
         return hasil;
     }
 }

@@ -1,68 +1,44 @@
 package anjay.function;
 import anjay.bot.*;
-import java.util.*;
 public class menu {
 
     public static void main(){
+
         System.out.println("""
                 1. Kalkulator (+,-,*,/)
                 2. Waktu dan Jam Dunia
                 3. Konversi mata uang
                 4. NPM to text
+                5. Rubah data login
                 """);
-    }
-    public static void Seleksi(int pilih) {
-        Scanner Inputan = new Scanner(System.in);
-        switch(pilih){
-            case 1:
-                kalkulator hitung = new kalkulator();
-                System.out.print("Masukan nilai: ");
-                String temp_1 = Inputan.next();
-                String[] tmp_kal = new String[512];
-                double[] temp_dobel;
-                int counter=0;
+
+        switch (fungsi.input1("Masukan Pilihan: ")) {
+            case 1 -> {
+                fungsi.clearScreen(); // Untuk clear screen
+                var kalkulator_output = kalkulator.exekusi(fungsi.inputstring("Masukan Nilai (Hanya support 2 Bilangan: "));
                 // Arie
-
-                if (temp_1.contains("*")) {
-                    var ano = temp_1.split("\\*");
-                    System.out.println(Arrays.toString(ano));
-                    System.out.println(Arrays.);
-
-//                    System.out.println("Hasilnya adalah: " + hitung.kali(Integer.valueOf(tmp_kal[0]),Integer.valueOf(tmp_kal[1])));
-                }
-                if (temp_1.contains("/")) {
-                    tmp_kal = temp_1.split("/");
-
-//                    System.out.println("Hasilnya adalah: " + hitung.bagi(Integer.valueOf(tmp_kal[0]),Integer.valueOf(tmp_kal[1])));
-                }
-                if (temp_1.contains("+")) {
-                    tmp_kal = temp_1.split("\\+");
-
-//                    System.out.println("Hasilnya adalah: " + hitung.tambah(Integer.valueOf(tmp_kal[0]),Integer.valueOf(tmp_kal[1])));
-                }
-                if (temp_1.contains("-")) {
-                    tmp_kal = temp_1.split("-");
-//                    System.out.println("Hasilnya adalah: " + hitung.kurang(Integer.valueOf(tmp_kal[0]), Integer.valueOf(tmp_kal[1])));
-                }
-
-                for (var hayuk:tmp_kal) {
-                    System.out.println("HASIL:"+ hayuk);
-                }
-                break;
-            case 2:
+                System.out.printf("Hasil kalkulasinya adalah : %.1f", kalkulator_output);
+            }
+            case 2 ->
                 //Waktu Sekarang dan Jam Dunia
-                System.out.print("Masukan jam sekarang dalam (6/12/3): ");
-                var jam = Inputan.nextInt();
-                jamdunia.main(jam);
-                break;
-            case 3:
-                //Konversi mata uang
-            case 4:
-                // NPM to text
-            case 5:
-                //Masih dipikirkan mungkin pake youtube download?
-        }
+                    jamdunia.main(fungsi.input1("Masukan Jam Sekarang: "));
 
+            //Konversi mata uang
+            // NPM to text
+            case 3, 4, 5 -> {
+                System.out.println("""
+                        1. List data login
+                        2. Tambah user
+                        3. Delete user""");
+                switch (fungsi.input1("Masukan pilihan: ")) {
+                    case 1 -> fungsi.cetak_filekelayar();
+                    case 2 -> fungsi.menambah_datakefile("Silahkan isi username");
+                    case 3 -> fungsi.hapus_data();
+                }
+            }
+
+            //Masih dipikirkan mungkin pake youtube download?
+        }
     }
 
 }
